@@ -31,11 +31,11 @@ require_once __DIR__ . '/Data/db.php';
       <div>
         <h3 class="text-white fw-bold text-center mt-5">Food</h3>
         <h4 class="fw-bold text-white my-4">Dog's</h4>
-        <div class="col-12 d-flex">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($dogFood as $product) : ?>
             <div class="card m-3">
               <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
@@ -46,11 +46,11 @@ require_once __DIR__ . '/Data/db.php';
         </div>
 
         <h4 class="fw-bold text-white my-4">Cat's</h4>
-        <div class="col-12 d-flex">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($catFood as $product) : ?>
             <div class="card m-3">
               <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
@@ -64,11 +64,11 @@ require_once __DIR__ . '/Data/db.php';
       <div>
         <h3 class="text-white fw-bold text-center mt-5">Toys</h3>
         <h4 class="fw-bold text-white my-4">Dog's Toys</h4>
-        <div class="col-12 d-flex">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($dogToys as $product) : ?>
             <div class="card m-3">
               <img src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
@@ -79,11 +79,11 @@ require_once __DIR__ . '/Data/db.php';
         </div>
 
         <h4 class="fw-bold text-white my-4">Cat's Toys</h4>
-        <div class="col-12 d-flex">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($catToys as $product) : ?>
             <div class="card m-3">
               <img src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
@@ -97,11 +97,11 @@ require_once __DIR__ . '/Data/db.php';
       <div>
         <h1 class="text-white fw-bold text-center mt-5">Kennel</h1>
         <h4 class="fw-bold text-white my-4">Dog's Kennel</h4>
-        <div class="col-12 d-flex">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($kennelDogBed as $product) : ?>
             <div class="card m-3">
               <img src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
@@ -113,11 +113,11 @@ require_once __DIR__ . '/Data/db.php';
         </div>
 
         <h4 class="fw-bold text-white my-4">Cat's Kennel</h4>
-        <div class="col-12 d-flex ">
+        <div class="col-12 d-flex justify-content-center">
           <?php foreach ($KennelCatBed as $product) : ?>
             <div class="card m-3">
               <img src="<?php echo $product->image ?>" alt="Product Image">
-              <div class="card-body">
+              <div class="card-body bg-body-secondary">
                 <h2><?php echo $product->name ?></h2>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Categoria: <?php echo $product->category->name ?></p>
