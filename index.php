@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/Model/Product.php';
+require_once __DIR__ . '/Model/Category.php';
 require_once __DIR__ . '/Data/db.php';
 
 
@@ -22,6 +23,46 @@ var_dump($bedProduct)
 <body>
   <div class="container my-5">
     <h1> php-oop-2</h1>
+
+    <div class="d-flex flex-wrap justify-content-center">
+
+      <?php foreach ($foodProduct as $product) : ?>
+        <div class="card m-3">
+          <img src="<?php echo $product->image ?>" alt="Product Image">
+          <div class="card-body">
+            <h2><?php echo $product->name ?></h2>
+            <p>Prezzo: <?php echo $product->price ?> €</p>
+            <p>Categoria: <?php echo $product->category->name ?></p>
+            <p>Tipo: <?php echo $product->type ?></p>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
+      <?php foreach ($toyProduct as $product) : ?>
+        <div class="card m-3">
+          <img src="<?php echo $product->image ?>" alt="Product Image">
+          <div class="card-body">
+            <h2><?php echo $product->name ?></h2>
+            <p>Prezzo: <?php echo $product->price ?> €</p>
+            <p>Categoria: <?php echo $product->category->name ?></p>
+            <p>Tipo: <?php echo $product->type ?></p>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
+      <?php foreach ($bedProduct as $product) : ?>
+        <div class="card m-3">
+          <img src="<?php echo $product->image ?>" alt="Product Image">
+          <div class="card-body">
+            <h2><?php echo $product->name ?></h2>
+            <p>Prezzo: <?php echo $product->price ?> €</p>
+            <p>Categoria: <?php echo $product->category->name ?></p>
+            <p>Tipo: <?php echo $product->type ?></p>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
+    </div>
   </div>
 </body>
 
