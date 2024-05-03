@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/Model/Product.php';
 require_once __DIR__ . '/Model/Category.php';
+require_once __DIR__ . '/Model/Kennel.php';
 require_once __DIR__ . '/Data/db.php';
 
 
@@ -27,65 +28,106 @@ require_once __DIR__ . '/Data/db.php';
 
     <div class="row d-flex flex-wrap justify-content-center">
 
-      <h3 class="text-white fw-bold text-center">Food</h3>
-      <h4 class="fw-bold text-white">Dog's</h4>
-      <div class="col-12 d-flex">
-        <?php foreach ($dogFood as $product) : ?>
-          <div class="card m-3">
-            <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
-            <div class="card-body">
-              <h2><?php echo $product->name ?></h2>
-              <p>Prezzo: <?php echo $product->price ?> €</p>
-              <p>Categoria: <?php echo $product->category->name ?></p>
-              <p>Tipo: <?php echo $product->type ?></p>
+      <div>
+        <h3 class="text-white fw-bold text-center mt-5">Food</h3>
+        <h4 class="fw-bold text-white my-4">Dog's</h4>
+        <div class="col-12 d-flex">
+          <?php foreach ($dogFood as $product) : ?>
+            <div class="card m-3">
+              <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
+
+        <h4 class="fw-bold text-white my-4">Cat's</h4>
+        <div class="col-12 d-flex">
+          <?php foreach ($catFood as $product) : ?>
+            <div class="card m-3">
+              <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
       </div>
 
-      <h4 class="fw-bold text-white">Cat's</h4>
-      <div class="col-12 d-flex">
-        <?php foreach ($catFood as $product) : ?>
-          <div class="card m-3">
-            <img class="img-fluid" src="<?php echo $product->image ?>" alt="Product Image">
-            <div class="card-body">
-              <h2><?php echo $product->name ?></h2>
-              <p>Prezzo: <?php echo $product->price ?> €</p>
-              <p>Categoria: <?php echo $product->category->name ?></p>
-              <p>Tipo: <?php echo $product->type ?></p>
+      <div>
+        <h3 class="text-white fw-bold text-center mt-5">Toys</h3>
+        <h4 class="fw-bold text-white my-4">Dog's Toys</h4>
+        <div class="col-12 d-flex">
+          <?php foreach ($dogToys as $product) : ?>
+            <div class="card m-3">
+              <img src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
+
+        <h4 class="fw-bold text-white my-4">Cat's Toys</h4>
+        <div class="col-12 d-flex">
+          <?php foreach ($catToys as $product) : ?>
+            <div class="card m-3">
+              <img src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
       </div>
 
-      <h3 class="text-white fw-bold">Toys</h3>
-      <div class="col-12 d-flex">
-        <?php foreach ($toyProduct as $product) : ?>
-          <div class="card m-3">
-            <img src="<?php echo $product->image ?>" alt="Product Image">
-            <div class="card-body">
-              <h2><?php echo $product->name ?></h2>
-              <p>Prezzo: <?php echo $product->price ?> €</p>
-              <p>Categoria: <?php echo $product->category->name ?></p>
-              <p>Tipo: <?php echo $product->type ?></p>
+      <div>
+        <h1 class="text-white fw-bold text-center mt-5">Kennel</h1>
+        <h4 class="fw-bold text-white my-4">Dog's Kennel</h4>
+        <div class="col-12 d-flex">
+          <?php foreach ($kennelDogBed as $product) : ?>
+            <div class="card m-3">
+              <img src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+                <p>Dimensione: <?php echo $product->size ?></p>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
+          <?php endforeach; ?>
+        </div>
 
-      <h3 class="text-white fw-bold">Kennel</h3>
-      <div class="col-12 d-flex">
-        <?php foreach ($bedProduct as $product) : ?>
-          <div class="card m-3">
-            <img src="<?php echo $product->image ?>" alt="Product Image">
-            <div class="card-body">
-              <h2><?php echo $product->name ?></h2>
-              <p>Prezzo: <?php echo $product->price ?> €</p>
-              <p>Categoria: <?php echo $product->category->name ?></p>
-              <p>Tipo: <?php echo $product->type ?></p>
+        <h4 class="fw-bold text-white my-4">Cat's Kennel</h4>
+        <div class="col-12 d-flex ">
+          <?php foreach ($KennelCatBed as $product) : ?>
+            <div class="card m-3">
+              <img src="<?php echo $product->image ?>" alt="Product Image">
+              <div class="card-body">
+                <h2><?php echo $product->name ?></h2>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
+                <p>Categoria: <?php echo $product->category->name ?></p>
+                <p>Tipo: <?php echo $product->type ?></p>
+                <p>Dimensione: <?php echo $product->size ?></p>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
+
       </div>
 
     </div>
