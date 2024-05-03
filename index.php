@@ -1,7 +1,12 @@
 <?php
 
 require_once __DIR__ . '/Model/Product.php';
+require_once __DIR__ . '/Data/db.php';
 
+
+var_dump($foodProduct);
+var_dump($toyProduct);
+var_dump($bedProduct)
 ?>
 
 <!DOCTYPE html>
