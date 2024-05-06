@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../Model/Product.php';
 require_once __DIR__ . '/../Model/Category.php';
+require_once __DIR__ . '/../Model/Kennel.php';
 
 $db = [
   $dogFood = [
